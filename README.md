@@ -2,6 +2,10 @@
 
 Cloud Profiler allows you to continuously profile CPU and heap usages.
 
+- CPU Time
+- Wall Time
+- Heap
+
 ## Description
 ### Enable Cloud Profiler API
 ```shell script
