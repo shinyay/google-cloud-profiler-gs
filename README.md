@@ -1,6 +1,6 @@
 # Cloud Profiler Getting Started
 
-Overview
+Cloud Profiler allows you to continuously profile CPU and heap usages.
 
 ## Description
 ### Enable Cloud Profiler API
