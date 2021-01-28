@@ -3,7 +3,10 @@
 Overview
 
 ## Description
-
+### Enable Cloud Profiler API
+```shell script
+$ gcloud services enable cloudprofiler.googleapis.com
+```
 ## Demo
 
 ## Features
