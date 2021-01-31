@@ -11,6 +11,11 @@ Cloud Profiler allows you to continuously profile CPU and heap usages.
 ```shell script
 $ gcloud services enable cloudprofiler.googleapis.com
 ```
+
+### Java Agent
+Cloud Profiler works by adding a Java agent to your JVM startup argument.
+The agent can communicate with the Cloud Profiler service in the Cloud.
+
 ## Demo
 
 ## Features
