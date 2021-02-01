@@ -21,6 +21,11 @@ We can download it from Cloud Storage:
 $ curl -LO https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz
 ```
 
+#### List of available versions
+```shell script
+$ gsutil ls "gs://cloud-profiler/java/cloud-profiler-*"
+```
+
 ## Demo
 
 ## Features
