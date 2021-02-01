@@ -18,7 +18,7 @@ The agent can communicate with the Cloud Profiler service in the Cloud.
 
 We can download it from Cloud Storage:
 ```shell script
-$ curl -LO https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz
+$ curl https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz |tar zx -C src/main/jib/opt/cprof
 ```
 
 #### List of available versions
