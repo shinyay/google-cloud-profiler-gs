@@ -26,6 +26,11 @@ $ curl https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_a
 $ gsutil ls "gs://cloud-profiler/java/cloud-profiler-*"
 ```
 
+### Containerize App with Agent
+We can containerize Java Agent with **Dockerfile** and **Jib**.
+
+#### Dockerfile
+
 ## Demo
 
 ## Features
