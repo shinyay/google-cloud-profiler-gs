@@ -7,7 +7,8 @@ RUN mkdir -p build/libs/dependency && (cd build/libs/dependency; jar -xf ../*.ja
 # Non-root user
 RUN adduser --system --home /var/cache/bootapp --shell /sbin/nologin bootapp;
 
-FROM gcr.io/distroless/java:11
+#FROM gcr.io/distroless/java:11
+FROM openjdk:11.0.10-slim
 ARG DEPENDENCY=/app/build/libs/dependency
 COPY --from=java-build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=java-build ${DEPENDENCY}/META-INF /app/META-INF
