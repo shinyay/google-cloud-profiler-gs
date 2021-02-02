@@ -38,6 +38,20 @@ RUN mkdir -p /opt/cprof && \
   | tar xzv -C /opt/cprof
 ```
 
+#### Jib
+
+### Build Container Image
+
+### Deploy to Cloud Run
+
+```shell script
+$ gcloud run deploy hello-spring \                                                                                                                                                      2021-02-02 12:22
+  --image=us-central1-docker.pkg.dev/(gcloud config get-value project)/shinyay-docker-repo/hello-profile:1.0.0 \
+  --no-allow-unauthenticated \
+  --set-env-vars=JAVA_TOOL_OPTIONS=-agentpath:/opt/cprof/profiler_java_agent.so=-logtostderr,-cprof_enable_heap_sampling=true \
+  --platform=managed
+```
+
 ## Demo
 
 ## Features
