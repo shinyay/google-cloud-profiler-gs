@@ -8,18 +8,18 @@ RUN mkdir -p build/libs/dependency && (cd build/libs/dependency; jar -xf ../*.ja
 RUN adduser --system --home /var/cache/bootapp --shell /sbin/nologin bootapp;
 
 #FROM gcr.io/distroless/java:11
-FROM openjdk:11.0.10-slim
+FROM openjdk:11.0.10
 ARG DEPENDENCY=/app/build/libs/dependency
 COPY --from=java-build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=java-build ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=java-build ${DEPENDENCY}/BOOT-INF/classes /app
+# Java Agent
+RUN mkdir -p /agent && \
+  wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz \
+  | tar xzv -C /agent
 # Non-root user
 COPY --from=java-build /etc/passwd /etc/shadow /etc/
 USER bootapp
-# Java Agent
-RUN mkdir -p /opt/cprof && \
-  wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz \
-  | tar xzv -C /opt/cprof
 # Java Option
 #   -XX:+PrintFlagsFinal : Display all options and their values used by the JVM
 #   -XshowSettings:vm : Display the settings of the JVM
