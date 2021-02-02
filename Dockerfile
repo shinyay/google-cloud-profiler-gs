@@ -14,9 +14,9 @@ COPY --from=java-build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=java-build ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=java-build ${DEPENDENCY}/BOOT-INF/classes /app
 # Java Agent
-RUN mkdir -p /agent && \
+RUN mkdir -p /opt/cprof && \
   wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz \
-  | tar xzv -C /agent
+  | tar xzv -C /opt/cprof
 # Non-root user
 COPY --from=java-build /etc/passwd /etc/shadow /etc/
 USER bootapp
