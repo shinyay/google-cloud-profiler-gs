@@ -31,6 +31,13 @@ We can containerize Java Agent with **Dockerfile** and **Jib**.
 
 #### Dockerfile
 
+```dockerfile
+FROM openjdk:11.0.10
+RUN mkdir -p /opt/cprof && \
+  wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz \
+  | tar xzv -C /opt/cprof
+```
+
 ## Demo
 
 ## Features
