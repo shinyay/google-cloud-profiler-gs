@@ -46,6 +46,12 @@ The followings are typical options:
 To enable heap profiling for **Java 11 and higher**, set `-cprof_enable_heap_sampling=true`.
 Heap profiling isn't supported for Java 10 and lower.
 
+#### Agent Logging
+The profiling agent can report logging information with `-logtostderr`
+
+- `-logtostderr`: Enable writing logs to standard error
+
+
 ### Containerize App with Agent
 We can containerize Java Agent with **Dockerfile** and **Jib**.
 
