@@ -35,6 +35,7 @@ When you load the Profiler agent, you specify a service-name argument and an opt
 |------------|-----------|
 |-cprof_service|Service Name to identify on Cloud Profiler|
 |-cprof_service_version|Service Version to identify on Cloud Profiler|
+|-cprof_project_id|Google Cloud Project ID|
 
 ### Containerize App with Agent
 We can containerize Java Agent with **Dockerfile** and **Jib**.
