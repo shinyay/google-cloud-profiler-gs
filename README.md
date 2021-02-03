@@ -40,7 +40,7 @@ The followings are typical options:
 |-cprof_project_id|Google Cloud Project ID||
 |-cprof_cpu_use_per_thread_timers|Most accurate CPU time profiles.<BR>Use of this option results in increased per-thread overhead.|false|
 |-cprof_enable_heap_sampling (*1)|When you enable heap profiling, the sampling interval is set to 512 KiB by default.|false|
-||||
+|-cprof_heap_sampling_interval|Sampling intervals from 256 KiB<BR>-cprof_heap_sampling_interval=262144<BR>Sampling intervals from 1024 KiB<BR>-cprof_heap_sampling_interval=1048576||
 
 (*1)
 To enable heap profiling for **Java 11 and higher**, set `-cprof_enable_heap_sampling=true`.
