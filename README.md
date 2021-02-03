@@ -31,11 +31,13 @@ When you load the Profiler agent, you specify a service-name argument and an opt
 
 `-agentpath:INSTALL_DIR/profiler_java_agent.so=OPTION1,OPTION2,OPTION3`
 
-|Agent Option|Description|
-|------------|-----------|
-|-cprof_service|Service Name to identify on Cloud Profiler|
-|-cprof_service_version|Service Version to identify on Cloud Profiler|
-|-cprof_project_id|Google Cloud Project ID|
+|Agent Option|Description|Default|
+|------------|-----------|-------|
+|-cprof_service|Service Name to identify on Cloud Profiler||
+|-cprof_service_version|Service Version to identify on Cloud Profiler||
+|-cprof_project_id|Google Cloud Project ID||
+|-cprof_cpu_use_per_thread_timers|Most accurate CPU time profiles.<BR>Use of this option results in increased per-thread overhead.|false|
+|||
 
 ### Containerize App with Agent
 We can containerize Java Agent with **Dockerfile** and **Jib**.
