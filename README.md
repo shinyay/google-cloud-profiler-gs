@@ -31,6 +31,8 @@ We can containerize Java Agent with **Dockerfile** and **Jib**.
 
 #### Dockerfile
 
+- [Dockerfile](Dockerfile)
+
 ```dockerfile
 FROM openjdk:11.0.10
 RUN mkdir -p /opt/cprof && \
