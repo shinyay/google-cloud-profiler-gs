@@ -26,6 +26,14 @@ $ curl https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_a
 $ gsutil ls "gs://cloud-profiler/java/cloud-profiler-*"
 ```
 
+#### Agent configuration
+When you load the Profiler agent, you specify a service-name argument and an optional service-version argument to configure it.
+
+`-agentpath:INSTALL_DIR/profiler_java_agent.so=OPTION1,OPTION2,OPTION3`
+
+|Agent Option|Description|
+|------------|-----------|
+
 ### Containerize App with Agent
 We can containerize Java Agent with **Dockerfile** and **Jib**.
 
