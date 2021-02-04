@@ -81,6 +81,9 @@ $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value
 ```
 
 #### Jib
+### Add Arbitrary Files to the Image
+- `src/main/jib/FILES`
+- `src/main/jib/DIRECTORY/FILES`
 
 ### Deploy to Cloud Run
 We don't have to configure JVM Arguments on Cloud Run ENVs
