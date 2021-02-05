@@ -51,6 +51,10 @@ The profiling agent can report logging information with `-logtostderr`
 
 - `-logtostderr`: Enable writing logs to standard error
 
+- `0`: Log all messages. Default logging level.
+- `1`: Log warning, error, and fatal messages.
+- `2`: Log error and fatal messages.
+- `3`: Log only fatal messages and stop the application.
 
 ### Containerize App with Agent
 We can containerize Java Agent with **Dockerfile** and **Jib**.
