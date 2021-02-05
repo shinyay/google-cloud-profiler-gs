@@ -83,6 +83,16 @@ $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value
 #### Jib
 
 ### Deploy to Cloud Run
+We don't have to configure JVM Arguments on Cloud Run ENVs
+
+```shell script
+$ gcloud run deploy hello-profile \
+  --image=us-central1-docker.pkg.dev/(gcloud config get-value project)/shinyay-docker-repo/hello-profile:1.0.0 \
+  --no-allow-unauthenticated \
+  --platform=managed
+```
+
+#### The case of Configure JVM Arguments on Cloud Run
 
 ```shell script
 $ gcloud run deploy hello-profile \
