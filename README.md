@@ -88,11 +88,17 @@ $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value
 $ gcloud run deploy hello-profile \
   --image=us-central1-docker.pkg.dev/(gcloud config get-value project)/shinyay-docker-repo/hello-profile:1.0.0 \
   --no-allow-unauthenticated \
-  --set-env-vars=JAVA_TOOL_OPTIONS=-agentpath:/opt/cprof/profiler_java_agent.so=-logtostderr,-cprof_enable_heap_sampling=true \
   --platform=managed
+  --set-env-vars=JAVA_TOOL_OPTIONS=-agentpath:/opt/cprof/profiler_java_agent.so=-logtostderr,-cprof_enable_heap_sampling=true \
 ```
 
 ## Demo
+### Access Cloud Run Instance
+```shell script
+$ curl -H "Authorization: Bearer "(gcloud auth print-identity-token)"" \
+    (gcloud run services describe hello-profile --format 'value(status.address.url)')/api/v1/hello
+```
+
 
 ## Features
 
