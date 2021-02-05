@@ -81,7 +81,7 @@ $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value
 ```
 
 #### Jib
-### Add Arbitrary Files to the Image
+##### Add Arbitrary Files to the Image
 We can put files as follows
 
 - `src/main/jib/`FILES
