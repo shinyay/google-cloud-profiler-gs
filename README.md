@@ -109,6 +109,8 @@ $ curl -H "Authorization: Bearer "(gcloud auth print-identity-token)"" \
     (gcloud run services describe hello-profile --format 'value(status.address.url)')/api/v1/hello
 ```
 
+### Open Cloud Profiler
+- [Cloud Profiler](https://console.cloud.google.com/profiler?_ga=2.172112163.1211938147.1612136098-983599867.1599137884)
 
 ## Features
 
