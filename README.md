@@ -150,6 +150,9 @@ $ curl -H "Authorization: Bearer "(gcloud auth print-identity-token)"" \
 
 ## Installation
 
+## References
+- [Profiling Java applications](https://cloud.google.com/profiler/docs/profiling-java#agent_configuration)
+
 ## Licence
 
 Released under the [MIT license](https://gist.githubusercontent.com/shinyay/56e54ee4c0e22db8211e05e70a63247e/raw/34c6fdd50d54aa8e23560c296424aeb61599aa71/LICENSE)
