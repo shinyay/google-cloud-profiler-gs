@@ -70,9 +70,13 @@ RUN mkdir -p /opt/cprof && \
   | tar xzv -C /opt/cprof
 ```
 
-#### Jib
+### Build Container Image by Cloud Build
 
-### Build Container Image
+```shell script
+$ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value project)/shinyay-docker-repo/hello-profile:1.0.0
+```
+
+#### Jib
 
 ### Deploy to Cloud Run
 
