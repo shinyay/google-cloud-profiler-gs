@@ -87,6 +87,8 @@ We can put files as follows
 - `src/main/jib/`FILES
 - `src/main/jib/`DIRECTORIES/FILES
 
+![agent-for-jib](https://user-images.githubusercontent.com/3072734/107008843-9592fd80-67d7-11eb-9c3f-6ed019cd3c7c.png)
+
 [references](https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.md#adding-arbitrary-files-to-the-image)
 
 ### Deploy to Cloud Run
