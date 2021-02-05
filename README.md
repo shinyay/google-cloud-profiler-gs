@@ -69,8 +69,12 @@ RUN mkdir -p /opt/cprof && \
   wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent.tar.gz \
   | tar xzv -C /opt/cprof
 ```
+##### Create Artifact Registry for Container
+```shell script
+$ gcloud artifacts repositories create shinyay-docker-repo --location us-central1 --repository-format docker
+```
 
-### Build Container Image by Cloud Build
+##### Build Container Image by Cloud Build
 
 ```shell script
 $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value project)/shinyay-docker-repo/hello-profile:1.0.0
