@@ -82,8 +82,12 @@ $ gcloud builds submit --tag us-central1-docker.pkg.dev/(gcloud config get-value
 
 #### Jib
 ### Add Arbitrary Files to the Image
-- `src/main/jib/FILES`
-- `src/main/jib/DIRECTORY/FILES`
+We can put files as follows
+
+- `src/main/jib/`FILES
+- `src/main/jib/`DIRECTORIES/FILES
+
+[references](https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.md#adding-arbitrary-files-to-the-image)
 
 ### Deploy to Cloud Run
 We don't have to configure JVM Arguments on Cloud Run ENVs
