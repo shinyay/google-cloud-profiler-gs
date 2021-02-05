@@ -23,6 +23,6 @@ USER bootapp
 # Java Option
 #   -XX:+PrintFlagsFinal : Display all options and their values used by the JVM
 #   -XshowSettings:vm : Display the settings of the JVM
-ENV _JAVA_OPTIONS "-XX:MaxRAMPercentage=80 -XX:MinRAMPercentage=50 -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -Dfile.encoding=UTF-8"
+ENV _JAVA_OPTIONS "-agentpath:/opt/cprof/profiler_java_agent.so=-logtostderr,-cprof_enable_heap_sampling=true -XX:MaxRAMPercentage=80 -XX:MinRAMPercentage=50 -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -Dfile.encoding=UTF-8"
 # Run Java with a classpath definition instead of a link to a JAR
 ENTRYPOINT ["java","-cp","app:app/lib/*","com.google.shinyay.GoogleCloudProfilerGsApplicationKt"]
