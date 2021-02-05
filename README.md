@@ -91,6 +91,12 @@ We can put files as follows
 
 [references](https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.md#adding-arbitrary-files-to-the-image)
 
+##### Build Container Image by Jib
+
+```shell script
+$ ./gradlew clean jib -Djib.to.image=gcr.io/(gcloud config get-value project)/hello-profile:1.0.0
+```
+
 ### Deploy to Cloud Run
 We don't have to configure JVM Arguments on Cloud Run ENVs
 
